@@ -1,0 +1,97 @@
+% chktex-file 44
+\chapter{Introduction}
+Introduction is written here
+
+\section{Problem Statement}
+
+\section{Motivation}
+
+\section{Objective}
+
+The objectives of the thesis are as follows.
+\begin{enumerate}
+    \item Objective 1.
+    \item Objective 2.
+\end{enumerate}
+
+\section{Structure}
+
+\chapter{State of the Art}
+
+\ac{XR} is written here to show how abbrevation is used and Figure~\ref{fig:test_figure} shows how figure is referenced and added in the document as shown below.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.2]{Figures/FigureTest.png}
+    \caption[\acs{XR} Test Figure]{\acs{XR} Test Figure\protect~\cite{Author.Year}}\label{fig:test_figure}
+\end{figure}
+
+This is how~\cite{Author.Year,Online.Year} citation is done throughout the document.
+
+\section{Section Heading2}\label{Section Heading2}
+
+\section{Section Heading3}
+
+If you want to add reference link to sections, it can be referenced like this Section~\ref{Section Heading2}.
+
+\chapter{Methodology}
+
+\chapter{Requirements Management}
+
+A simple table is shown in table~\ref{tab:sampletable}.
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|l|}
+        \hline
+        \textbf{Col1} & \textbf{Col2} & \textbf{Col3}       \\
+        \hline
+        \multirow{3}{*}{Group A}
+                      & Row 1         & Short description 1 \\
+        \cline{2-3}
+                      & Row 2         & Short description 2 \\
+        \cline{2-3}
+                      & Row 3         & Short description 3 \\
+        \hline
+        \multirow{2}{*}{Group B}
+                      & Row 1         & Short description 4 \\
+        \cline{2-3}
+                      & Row 2         & Short description 5 \\
+        \hline
+    \end{tabular}
+    \caption{Minimal multirow table sample}\label{tab:sampletable}
+\end{table}
+
+\chapter{Implementation}
+
+If you want to add two figures side by side please follow this implementation and it can referenced in the same way figure~\ref{fig:sidebysidefigure}.
+
+\begin{figure}[!ht]
+    \centering
+    \subfloat[\centering Caption 1]{{\includegraphics[scale=0.1]{Figures/FigureTest.png}}}
+    \qquad
+    \subfloat[\centering Caption 2]{{\includegraphics[scale=0.1]{Figures/FigureTest.png} }}
+    \caption[Side by side figureS]{Side by side figure}\label{fig:sidebysidefigure}
+\end{figure}
+
+Code snippets can be added and referenced as shown in~\ref{lst:CodeSnippetSample}
+
+\begin{listing}[!ht]
+    \centering
+    \inputminted{csharp}{Code/SampleCode.cs}
+    \caption{Code Snippet Sample}
+    \label{lst:CodeSnippetSample}
+\end{listing}
+
+
+\chapter{Evaluation and Discussion}
+
+Evaluation and discussion is written here.
+
+\chapter{Conclusion}
+
+Conclusion is written here.
+
+\chapter{Future Works}
+
+Future Works is written here.

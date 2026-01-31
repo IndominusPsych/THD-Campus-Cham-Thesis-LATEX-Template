@@ -1,0 +1,171 @@
+\documentclass[a4paper,twoside,fontsize=12pt]{scrbook}
+
+% --- Font:Verdana ---
+\usepackage{fontspec}
+\setsansfont{Verdana}
+\renewcommand{\familydefault}{\sfdefault}
+\setsansfont{Verdana}[Scale=MatchLowercase]
+\setmonofont{Consolas}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% --- Language, Typography & Line spacing ---
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{setspace}
+\onehalfspacing{}
+
+% --- Header Size ---
+\setkomafont{chapter}{\fontsize{16pt}{19.2pt}\selectfont}
+\setkomafont{section}{\fontsize{14pt}{16.8pt}\selectfont}
+\setkomafont{subsection}{\fontsize{13pt}{15.6pt}\selectfont}
+\setkomafont{subsubsection}{\fontsize{13pt}{15.6pt}\selectfont}
+
+% --- Paragraph Indentation ---
+\KOMAoptions{parskip=half}
+\setlength{\parindent}{0pt} 
+
+% --- Spacing after and before a header ---
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=4pt]{chapter}
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=4pt]{section}
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=4pt]{subsection}
+\RedeclareSectionCommand[beforeskip=0pt, afterskip=4pt]{subsubsection}
+
+% --- Page Layout ---
+\usepackage[
+  inner=3cm,
+  outer=2cm,
+  top=2.5cm,
+  bottom=2.5cm,
+  headsep=1.5cm,
+  footskip=1.5cm
+]{geometry}
+
+
+% --- Graphics & Tables ---
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multirow}
+\usepackage{subfig}
+
+% --- Requirements Table ---
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}} % centered
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}} % left
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}} % right
+
+% --- Header/Footer with KOMA ---
+\usepackage[automark]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\ohead{}
+\KOMAoptions{headsepline=false}
+
+% --- For \square command ---
+\usepackage{amssymb} 
+
+% --- Measure font size ---
+\makeatletter
+\newcommand\thefontsize{The current font size is: \f@size~pt}
+\makeatother
+
+% --- Abbrevations ---
+\usepackage[printonlyused]{acronym}
+
+% --- Code Snippets ---
+\usepackage{listings}
+\usepackage{tocbasic}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage[chapter]{minted}
+\usemintedstyle{emacs}
+\setminted{
+  breaklines=true,
+  breakanywhere=true,
+  breakautoindent=true,
+}
+
+% --- References ---
+\usepackage{csquotes}       
+\usepackage{xurl}
+\bibliographystyle{unsrt}
+
+% --- Links ---
+\usepackage[breaklinks]{hyperref}
+
+\hypersetup{
+    colorlinks=true,       
+    linkcolor=black,       
+    citecolor=blue, %blue        
+    urlcolor=cyan,  %cyan      
+    pdfborder={0 0 0},
+    % ocgcolorlinks=true     
+}
+
+% Replace these values
+\newcommand{\thesistitleDE}{German Title of Thesis}
+\newcommand{\thesistitleEN}{English Title of Thesis}
+\newcommand{\student}{Author}
+\newcommand{\matrnr}{Matriculation Number}
+\newcommand{\submissiondate}{Date in DD.\ MONTH YYYY}
+\newcommand{\supervisor}{Name of the university supervisor}
+\newcommand{\secsupervisor}{Name of the university external supervisor}
+\newcommand{\campus}{Deggendorf Institute of Technology, Campus Cham}
+\newcommand{\faculty}{Faculty of Applied Natural Sciences and Industrial Engineering}
+\newcommand{\submissionplace}{Cham}
+\newcommand{\studies}{Master Mechatronic and Cyber-Physical Systems}
+\newcommand{\degree}{Master of Engineering (M.Eng.)}
+\newcommand{\place}{Place}
+
+% --- Begin Document ---
+\begin{document}
+
+% --- Roman Page Numbers for Preliminaries ---
+\frontmatter
+\pagenumbering{roman}
+
+% --- Title Page ---
+\cleardoublepage{}
+% \input{coverpage}
+\input{title}
+
+% --- Declaration of authorship ---
+\input{declaration}
+
+% --- Declaration usage of AI ---
+\input{declaration_gpt}
+
+% --- Acknowledgements ---
+\input{acknowledgement}
+
+% --- Abstract ---
+\input{abstract}
+
+% --- Table of Contents ---
+\tableofcontents
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\renewcommand\listoflistingscaption{List of Code Snippets}
+\listoflistings{}
+\addcontentsline{toc}{chapter}{List of Code Snippets}
+
+\input{abbrevations}
+
+% --- Main Content ---
+\mainmatter{}
+\pagenumbering{arabic}
+\input{main}
+
+% --- References ---
+\input{references}
+
+\input{appendix}
+
+\end{document}

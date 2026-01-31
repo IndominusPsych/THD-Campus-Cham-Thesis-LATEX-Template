@@ -1,0 +1,46 @@
+{
+  "latex-workshop.latex.toolchain": [
+    {
+      "command": "latexmk",
+      "args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "%f"]
+    }
+  ],
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.intellisense.file.exclude": ["node_modules/**", ".git/**"],
+  "latex-workshop.latex.autoBuild.enabled": true,
+  "latex-workshop.latex.autoBuild.delay": 2000,
+  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.latex.clean.onBuild": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.log",
+    "*.out",
+    "*.toc"
+  ],
+  "latex-workshop.latex.build.args": [
+    "-pdf",
+    "-bibtex",
+    "-interaction=nonstopmode",
+    "%DOC%"
+  ],
+  "latex-workshop.latex.autoFocus.preview": true,
+  "latex-workshop.message.error.enabled": true,
+  "latex-workshop.message.warning.enabled": true,
+  "latex-workshop.message.info.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.rulers": [80],
+  "files.autoSave": "onWindowChange",
+  "files.associations": {
+    "*.tex": "latex",
+    "*.bib": "bibtex"
+  },
+  "latex-workshop.intellisense.biblatexJSON.replace": {},
+  "cmake.configureSettings": {},
+  "cSpell.words": ["ocgcolorlinks", "Verdana"]
+}

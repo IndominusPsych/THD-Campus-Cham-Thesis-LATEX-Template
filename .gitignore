@@ -1,0 +1,19 @@
+# Compiled source #
+###################
+*.aux
+*.bib
+*.lof
+*.lol
+*.lot
+*.toc
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.out
+*.yaml
+# Logs and databases #
+######################
+*.txt
+_minted/
