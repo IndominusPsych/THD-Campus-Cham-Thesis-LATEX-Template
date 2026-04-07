@@ -5,7 +5,7 @@ This repository provides an **unofficial LaTeX setup** for academic theses inten
 It is suitable for **Master thesis** and uses a **deterministic, examiner-safe build process** based on **XeLaTeX** and **BibTeX**.
 
 > ⚠️ **Disclaimer**  
-> This is **not an official THD Campus Cham Thesus template**.  
+> This is **not an official THD Campus Cham Thesis template**.  
 > Students are responsible for ensuring that the final document complies with the **latest THD thesis submission guidelines**.
 
 ## Cloning the Repository
